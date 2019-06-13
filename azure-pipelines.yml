@@ -15,7 +15,9 @@ steps:
     versionSpec: '10.x'
   displayName: 'Node.js install'
 
-- script: /bin/bash -c 'cp /src/package.json /home/vsts/work/ && npm install'
+- script: git clone https://github.com/nemrood/alexa.git
+
+- script: /bin/bash -c 'cd alexa/src/ && cp package.json /home/vsts/work/ && npm install'
 
 - script: npm build
 
