@@ -17,7 +17,5 @@ steps:
 
 - script: pwd
 - script: ls -lartH
-- script: /bin/bash -c 'cd src/ && npm install'
+- script: /bin/bash -c 'cd /home/vsts/work/ && ls -lartH'
 
-- script: npm run build
-  displayName: 'npm build'
