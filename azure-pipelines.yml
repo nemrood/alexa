@@ -15,11 +15,9 @@ steps:
     versionSpec: '10.x'
   displayName: 'Node.js install'
 
-- script: ls -lartH
-
 - script: pwd
-
-- script: /bin/bash -c 'cd /project && npm install'
+- script: ls -lartH
+- script: /bin/bash -c 'cd src/ && npm install'
 
 - script: npm run build
   displayName: 'npm build'
