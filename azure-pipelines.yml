@@ -15,7 +15,7 @@ steps:
     versionSpec: '10.x'
   displayName: 'Node.js install'
 
-- script: pwd
-- script: ls -lartH
-- script: /bin/bash -c 'cd /home/vsts/work/ && ls -lartH'
+- script: /bin/bash -c 'cp /src/package.json /home/vsts/work/ && npm install'
+
+- script: npm build
 
