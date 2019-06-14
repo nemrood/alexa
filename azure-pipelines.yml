@@ -15,8 +15,6 @@ steps:
     versionSpec: '10.x'
   displayName: 'Node.js install'
 
-- script: git clone https://github.com/nemrood/alexa.git
-
 - script: /bin/bash -c 'cd src && cp package.json /home/vsts/work/ && npm install'
 
 - script: npm build
@@ -33,7 +31,7 @@ steps:
 - task: AzureRmWebAppDeployment@3
   inputs:
     azureSubscription: 'exit'
-    WebAppName: 'xyhome'
+    WebAppName: 'xyapp'
     Package: '$(System.DefaultWorkingDirectory)'
     GenerateWebConfig: true
     WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
