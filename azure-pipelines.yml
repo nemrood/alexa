@@ -28,8 +28,8 @@ steps:
 
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: '<Azure service connections>'
-    WebAppName: '<Name of web app>'
+    azureSubscription: 'exit'
+    WebAppName: 'xyhome'
     Package: '$(System.DefaultWorkingDirectory)'
     GenerateWebConfig: true
     WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
